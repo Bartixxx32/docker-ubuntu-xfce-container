@@ -15,6 +15,7 @@ echo 'LANGUAGE='en_US:en'' >> $ENVIRONMENT_FILE
 echo "Updating the repository sources list..."
 apt-get -qq autoremove -y
 apt-get -qq update -y
+apt-get -qq upgrade -y
 
 # Install required packages
 echo "Installing required packages..."
