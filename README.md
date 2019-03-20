@@ -28,7 +28,7 @@ If you want to override the VNC resolution:
 - docker run -d -p 5901:5901 -p 6901:6901 -e VNC_RESOLUTION=1360x768 jiteshsojitra/docker-ubuntu-xfce-container
 
 If you want to change the VNC password:
-- docker run -d -p 5901:5901 -p 6901:6901 -e VNC_PW=[vnc-password] jiteshsojitra/docker-ubuntu-xfce-container
+- docker run -d -p 5901:5901 -p 6901:6901 -e VNC_PW=23042001 bartixxx32/ubuntu-xfce-novnc
 
 Build an image from scratch:
 - docker build -t jiteshsojitra/docker-ubuntu-xfce-container
