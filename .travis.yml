@@ -1,0 +1,12 @@
+language: bash
+
+services:
+  - docker
+
+script:
+- docker build . --tag test
+
+
+
+
+
