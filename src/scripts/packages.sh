@@ -33,6 +33,7 @@ apt-get -qq install -y apt-utils \
 	libappindicator1 \
 	fonts-liberation \
 	libxss1 \
+   glmark2 \
 	vim \
 	wget \
 	net-tools \
