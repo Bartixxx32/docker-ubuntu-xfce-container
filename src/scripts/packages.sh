@@ -19,7 +19,7 @@ apt-get upgrade -y
 
 # Install required packages
 echo "Installing required packages..."
-apt-get -qq install -y apt-utils \
+apt-get install -y apt-utils \
 	software-properties-common \
 	build-essential \
 	openssh-server \

@@ -3,8 +3,8 @@ set -euxo pipefail
 
 # Xfce UI
 echo "Installing Xfce4 UI components"
-apt-get -qq install -y supervisor xfce4 xfce4-terminal
-apt-get -qq purge -y pm-utils xscreensaver*
+apt-get install -y supervisor xfce4 xfce4-terminal
+apt-get purge -y pm-utils xscreensaver*
 
 # Java
 echo "Installing Java..."
@@ -12,11 +12,11 @@ echo "===> Add webupd8 repository..."  && \
 echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list  && \
 echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list  && \
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886  && \
-apt-get -qq update -y && \
+apt-get update -y && \
 echo "===> Install Java8"  && \
 echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections  && \
 echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections  && \
-DEBIAN_FRONTEND=noninteractive apt-get -qq install -y oracle-java8-installer oracle-java8-set-default && \
+DEBIAN_FRONTEND=noninteractive apt-get install -y oracle-java8-installer oracle-java8-set-default && \
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # TigerVNC
