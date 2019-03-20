@@ -19,15 +19,6 @@ echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selecti
 DEBIAN_FRONTEND=noninteractive apt-get -qq install -y oracle-java8-installer oracle-java8-set-default && \
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
-# Chrome browser
-echo "Installing chrome browser..."
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-dpkg -i google-chrome-stable_current_amd64.deb; apt-get -y install && \
-rm google-chrome-stable_current_amd64.deb
-#sed -i -e 's@Exec=/usr/bin/google-chrome-stable %U@Exec=/usr/bin/google-chrome-stable %U --no-sandbox@g' /usr/share/applications/google-chrome.desktop && \
-#ln -s /usr/share/applications/google-chrome.desktop ~/Desktop && \
-#chmod +x ~/Desktop/google-chrome.desktop
-
 # TigerVNC
 echo "Installing TigerVNC server..."
 wget -qO- https://dl.bintray.com/tigervnc/stable/tigervnc-1.8.0.x86_64.tar.gz | tar xz --strip 1 -C /
